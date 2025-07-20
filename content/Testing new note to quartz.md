@@ -1,0 +1,1 @@
+here new text for obsidian and quartz
