@@ -1,0 +1,30 @@
+/* Узкий контент как в Obsidian */
+.center, .page-content {
+  max-width: 750px !important;
+  margin: 0 auto;
+}
+
+/* Убрать правую панель полностью */
+.right {
+  display: none !important;
+}
+
+/* Центрировать основной контент */
+.content-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+/* EltonLabs кастомизация */
+.center, .page-content {
+  max-width: 750px !important;
+  margin: 0 auto;
+}
+
+.right {
+  display: none !important;
+}
+
+.page-title h1 {
+  color: #405cf5;
+}

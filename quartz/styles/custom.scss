@@ -1,0 +1,19 @@
+@use "./base.scss";
+
+// put your custom CSS here!
+/* Скрываем папку _base из Explorer */
+.explorer li:has(a[href*="_base/"]) {
+  display: none !important;
+}
+
+.explorer .folder-outer:has(a[href*="_base"]) {
+  display: none !important;
+}
+/* Скрываем папку _base из Explorer */
+.explorer li:has(a[href*="_base/"]) {
+  display: none !important;
+}
+
+.explorer .folder-outer:has(a[href*="_base"]) {
+  display: none !important;
+}
