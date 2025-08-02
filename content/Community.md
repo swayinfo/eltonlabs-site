@@ -1,5 +1,5 @@
 ---
-{"publish":true,"created":"2025-07-21T01:33:00.263+03:00","modified":"2025-08-02T13:23:58.262+03:00","cssclasses":""}
+{"publish":true,"created":"2025-08-02T13:55:59.215+03:00","modified":"2025-08-02T13:55:59.222+03:00","cssclasses":""}
 ---
 
 >[!info] ##### Obsidian & Mind Club
