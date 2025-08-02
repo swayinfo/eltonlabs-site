@@ -1,5 +1,5 @@
 ---
-{"publish":true,"title":"EltonLabs — про систему и порядок","created":"2025-07-21T01:33:00.269+03:00","modified":"2025-08-02T13:16:01.109+03:00","cssclasses":""}
+{"publish":true,"title":"EltonLabs — про систему и порядок","created":"2025-07-21T01:33:00.269+03:00","modified":"2025-08-02T13:17:02.481+03:00","cssclasses":""}
 ---
 
 
