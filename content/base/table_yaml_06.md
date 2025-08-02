@@ -11,7 +11,62 @@
 и затем в заметке "Май 2025" вставить следующий код:
 
 ```
-❌ Нет данных за май.
+```dataviewjs
+const pages = dv.pages('"2. Areas/Мой дневник/1-3 Daily notes"')
+  .where(p => p.date && p.date.toString().includes("-05-2025"))
+
+const totalDays = 31
+const count = (key) => pages.filter(p => p[key] === true).length
+
+const habits = [
+  { name: "Разминка", key: "разминка" },
+  { name: "Спортпитание", key: "спортпитание" },
+  { name: "Чтение", key: "Чтениекниг" }
+]
+
+function getColor(percent) {
+  if (percent >= 80) return "#4CAF50"  // зелёный
+  if (percent >= 50) return "#FFC107"  // жёлтый
+  return "#F44336"                     // красный
+}
+
+if (pages.length === 0) {
+  dv.paragraph("❌ Нет данных за май.");
+} else {
+  const container = this.container
+
+  habits.forEach(habit => {
+    const current = count(habit.key)
+    const percent = Math.round((current / totalDays) * 100)
+    const color = getColor(percent)
+
+    const block = document.createElement("div")
+    block.style.marginBottom = "16px"
+
+    const label = document.createElement("div")
+    label.textContent = `${habit.name}: ${percent}%`
+    label.style.fontWeight = "bold"
+    label.style.marginBottom = "4px"
+
+    const barContainer = document.createElement("div")
+    barContainer.style.background = "#eee"
+    barContainer.style.borderRadius = "6px"
+    barContainer.style.height = "16px"
+    barContainer.style.width = "100%"
+    barContainer.style.overflow = "hidden"
+
+    const bar = document.createElement("div")
+    bar.style.background = color
+    bar.style.height = "100%"
+    bar.style.width = `${percent}%`
+    bar.style.transition = "width 0.3s"
+
+    barContainer.appendChild(bar)
+    block.appendChild(label)
+    block.appendChild(barContainer)
+    container.appendChild(block)
+  })
+}```
 ```
 
 -> const pages = dv.pages('"2. Areas/Мой дневник/1-3 Daily notes"') — заменить на свой путь, в котором лежат наши заметки с YAML
